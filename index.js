@@ -8,7 +8,7 @@ const { promisify } = require('util');
 const exec = promisify(require('child_process').exec);
 const { execSync } = require('child_process');        // 只填写UPLOAD_URL将上传节点,同时填写UPLOAD_URL和PROJECT_URL将上传订阅
 
-const UUID = process.env.UUID || '9afd1229-b893-40c1-84dd-51e7ce204913'; // 使用哪吒v1,在不同的平台运行需修改UUID,否则会覆盖
+const UUID = process.env.UUID || '9afd1229-b893-40c1-84dd-51e7ce204903'; // 使用哪吒v1,在不同的平台运行需修改UUID,否则会覆盖
 const ARGO = process.env.ARGO || '' ;                       // 启用 y, 默认不启用。
 const ARGO_DOMAIN = process.env.ARGO_DOMAIN || '';          // 固定隧道域名,留空即启用临时隧道
 const ARGO_AUTH = process.env.ARGO_AUTH || '';              // 固定隧道密钥json或token,留空即启用临时隧道,json获取地址：https://json.zone.id
@@ -531,7 +531,7 @@ async function uploadNodes() {
   }
 }
 
-// 9s后删除相关文件
+// 61s后删除相关文件
 function cleanFiles() {
   setTimeout(() => {
     const filesToDelete = [bootLogPath, configPath, webPath, botPath];  
@@ -556,7 +556,7 @@ function cleanFiles() {
         console.log('Thank you for using this script, enjoy!');
       });
     }
-  }, 9000); // 9s
+  }, 61000); // 61s
 }
 cleanFiles();
 
