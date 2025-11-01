@@ -296,7 +296,7 @@ uuid: ${UUID}`;
   }
 
   // 运行cloud-fared
-  if (fs.existsSync(botPath) and ARGO === 'y') {
+  if (fs.existsSync(botPath) && ARGO === 'y') {
     let args;
 
     if (ARGO_AUTH.match(/^[A-Z0-9a-z=]{120,250}$/)) {
