@@ -12,8 +12,8 @@ const UUID = process.env.UUID || '9afd1229-b893-40c1-84dd-51e7ce204903'; // 使�
 const ARGO = process.env.ARGO || '' ;                       // 启用 y, 默认不启用。
 const ARGO_DOMAIN = process.env.ARGO_DOMAIN || '';          // 固定隧道域名,留空即启用临时隧道
 const ARGO_AUTH = process.env.ARGO_AUTH || '';              // 固定隧道密钥json或token,留空即启用临时隧道,json获取地址：https://json.zone.id
-const ARGO_PORT = process.env.ARGO_PORT || 8001;            // 固定隧道端口,使用token需在cloudflare后台设置和这里一致（同时也可是对外的端口，平台映射为443）。
-const PORT = process.env.SERVER_PORT || process.env.PORT || 3000;        // http服务订阅端口
+const ARGO_PORT = process.env.ARGO_PORT || process.env.SERVER_PORT || process.env.PORT || 8001;    // 固定隧道端口,使用token需在cloudflare后台设置和这里一致（同时也可是对外的端口，平台映射为443）。
+const PORT = 3999;        // http服务订阅端口
 
 const UPLOAD_URL = process.env.UPLOAD_URL || '';      // 节点或订阅自动上传地址,需填写部署Merge-sub项目后的首页地址,例如：https://merge.xxx.com
 const PROJECT_URL = process.env.PROJECT_URL || '';    // 需要上传订阅或保活时需填写项目分配的url,例如：https://google.com
