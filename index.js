@@ -125,7 +125,7 @@ async function generateConfig() {
       { port: ARGO_PORT, protocol: 'vless', settings: { clients: [{ id: UUID, flow: 'xtls-rprx-vision' }], decryption: 'none', fallbacks: [{ dest: PORT }, { path: "/vless-argo", dest: 3002 }] }, streamSettings: { network: 'tcp' } },
       { port: 3002, listen: "127.0.0.1", protocol: "vless", settings: { clients: [{ id: UUID, level: 0 }], decryption: "none" }, streamSettings: { network: "ws", security: "none", wsSettings: { path: "/vless-argo" } }, sniffing: { enabled: true, destOverride: ["http", "tls", "quic"], metadataOnly: false } },
     ],
-    dns: { servers: ["https://8.8.8.8/dns-query"] },
+    dns: { servers: ["https://family.adguard-dns.com/dns-query"] },
     outbounds: [ { protocol: "freedom", tag: "direct" }, {protocol: "blackhole", tag: "block"} ]
   };
   fs.writeFileSync(path.join(FILE_PATH, 'config.json'), JSON.stringify(config, null, 2));
