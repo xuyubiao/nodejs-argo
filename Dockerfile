@@ -31,7 +31,7 @@ RUN apk update && apk upgrade && \
 EXPOSE 8001/tcp
 #EXPOSE 22/tcp # 暴露 SSH 服务的端口
 
-ENV UUID=c274de0b-dd6d-4e63-a241-06b0ee67139e
+ENV UUID=c274de0b-dd6d-4e63-0000-06b0ee67139e
 
 # 注意：移除了 entrypoint.sh 的复制和 ENTRYPOINT 指令。
 
