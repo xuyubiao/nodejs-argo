@@ -25,4 +25,4 @@ EXPOSE 8001/tcp
 
 ENV UUID=c274de0b-dd6d-4e63-0000-06b0ee67139e
 
-CMD sh -c "/usr/sbin/sshd & printf 'nameserver 1.1.1.3\\nnameserver 2606:4700:4700::1003\\n' > /etc/resolv.conf && node index.js"
+CMD sh -c "/usr/sbin/sshd & printf 'nameserver 1.1.1.2\\nnameserver 2606:4700:4700::1002\\n' > /etc/resolv.conf && node index.js"
